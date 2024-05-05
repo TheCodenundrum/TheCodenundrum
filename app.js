@@ -16,6 +16,7 @@ var logger = require('morgan');
 // Router Requires
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var pythonRouter = require('./routes/python');
 
 // ----------------------------------------------------------------------------
 // Instantiate App
@@ -40,6 +41,7 @@ app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/
 // Routes
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/python', pythonRouter);
 
 // ----------------------------------------------------------------------------
 // 404
