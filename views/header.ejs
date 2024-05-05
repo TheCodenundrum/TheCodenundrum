@@ -31,7 +31,6 @@
     </ul>
 
     <div class="col-md-3 text-end">
-      <div class="g-signin2 btn me-2"></div>
       <button type="button" class="btn btn-primary" onclick="signOut();">Sign Out</button>
     </div>
   </header>
@@ -42,15 +41,6 @@
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 
 <script>
-  // Sign In
-  function onSignIn(googleUser) {
-    var profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    console.log('Name: ' + profile.getName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-  }
-
   // Sign Out
   function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
